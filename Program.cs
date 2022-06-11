@@ -23,77 +23,30 @@ namespace test0605
             M_list.Add(new Monster(86, 89, 5));
             M_list.Add(new Monster(321, 98, 100));
 
-            M_list.Sort(delegate(Monster a,Monster b) {
-                if (a.health<b.health)
-                {
-                    return -1;
-                }
-                else
-                {
-                    return 1;
-                }
-            });
+            List<BagSthing> B_list = new List<BagSthing>();
+            B_list.Add(new BagSthing(1, 0, "神器"));
+            B_list.Add(new BagSthing(1, 1, "传说"));
+            B_list.Add(new BagSthing(1, 3, "稀有"));
+            B_list.Add(new BagSthing(1, 5, "破烂"));
+            B_list.Add(new BagSthing(1, 6, "超级破烂"));
+            B_list.Add(new BagSthing(2, 0, "未定义"));
+            B_list.Add(new BagSthing(0, 1, "次级神药"));
+            B_list.Add(new BagSthing(1, 2, "史诗"));
+            B_list.Add(new BagSthing(1, 4, "精良"));
+            B_list.Add(new BagSthing(0, 0, "神药"));
 
-            while (true)
+            Console.WriteLine("怪物列表排序选1，背包列表排序选2");
+            string choice = Console.ReadLine();
+            if (choice=="1")
             {
-                Console.WriteLine("输入1按血量排序，输入2按攻击排序，输入3按防御排序，输入0倒序列");
-                int choice = int.Parse(Console.ReadLine());
-                switch (choice)
-                {
-                    case 1:
-                        M_list.Sort(delegate (Monster a, Monster b) {
-                            if (a.health < b.health)
-                            {
-                                return -1;
-                            }
-                            else
-                            {
-                                return 1;
-                            }
-                        });
-                        break;
-                    case 2:
-                        M_list.Sort(delegate (Monster a, Monster b) {
-                            if (a.atk < b.atk)
-                            {
-                                return -1;
-                            }
-                            else
-                            {
-                                return 1;
-                            }
-                        });
-                        break;
-                    case 3:
-                        M_list.Sort(delegate (Monster a, Monster b) {
-                            if (a.def < b.def)
-                            {
-                                return -1;
-                            }
-                            else
-                            {
-                                return 1;
-                            }
-                        });
-                        break;
-                    case 0:
-                        List<Monster> temp = new List<Monster>();
-                        for (int i = M_list.Count-1; i >=0; i--)
-                        {
-                            temp.Add(M_list[i]);
-                        }
-                        M_list = temp;
-                        break;
-                    default:
-                        Console.WriteLine("输入不合法，请重新输入");
-                        break;
-                }
-                Console.WriteLine("当前的怪物列表:");
-                for (int i = 0; i < M_list.Count; i++)
-                {
-                    Console.WriteLine("序号:{0}，血量:{1}，攻击力:{2}，防御力:{3}",i, M_list[i].health, M_list[i].atk, M_list[i].def);
-                }
+                new MonsterSort(M_list);//使用第一种按血量，攻击或防御的方式排列
             }
+            else if (choice=="2")
+            {
+                new BagSthingSort(B_list);
+                Console.ReadKey();
+            }
+            
         }
     }
 }
