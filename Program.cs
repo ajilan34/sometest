@@ -35,7 +35,7 @@ namespace test0605
             B_list.Add(new BagSthing(1, 4, "精良"));
             B_list.Add(new BagSthing(0, 0, "神药"));
 
-            Console.WriteLine("怪物列表排序选1，背包列表排序选2,方块移动模式选3");
+            Console.WriteLine("怪物列表排序选1，背包列表排序选2,方块移动模式选3,type反射测试选4");
             string choice = Console.ReadLine();
             if (choice=="1")
             {
@@ -50,7 +50,18 @@ namespace test0605
             {
                 ThreadTest threadtest = new ThreadTest();
             }
-            
+            else if (choice == "4")
+            {
+                new UseTypeTest();
+                Console.WriteLine("=======================================");
+                new TryDll();
+                Console.ReadKey();
+            }
+            else if (choice == "5")
+            {
+                new UsePlayerDll();
+                Console.ReadKey();
+            }
         }
     }
 }

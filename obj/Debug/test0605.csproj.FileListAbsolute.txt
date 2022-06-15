@@ -5,3 +5,7 @@ C:\Users\lzd\source\repos\zhulou\test0605\obj\Debug\test0605.csproj.AssemblyRefe
 C:\Users\lzd\source\repos\zhulou\test0605\obj\Debug\test0605.csproj.CoreCompileInputs.cache
 C:\Users\lzd\source\repos\zhulou\test0605\obj\Debug\test0605.exe
 C:\Users\lzd\source\repos\zhulou\test0605\obj\Debug\test0605.pdb
+C:\Users\lzd\source\repos\zhulou\test0605\bin\Debug\test0605.exe.manifest
+C:\Users\lzd\source\repos\zhulou\test0605\bin\Debug\test0605.application
+C:\Users\lzd\source\repos\zhulou\test0605\obj\Debug\test0605.exe.manifest
+C:\Users\lzd\source\repos\zhulou\test0605\obj\Debug\test0605.application
